@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://d00286vpr4yvm"]
+
+[ext_resource type="Script" uid="uid://bd8qgpcplxcmi" path="res://Scripts/UI/ui.gd" id="1_ahcct"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_ahcct")
+
+[node name="Gems" type="Label" parent="."]
+offset_left = 451.0
+offset_right = 504.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 24
+text = "Gems: "
+
+[node name="Pebbles" type="Label" parent="."]
+offset_left = 211.0
+offset_right = 314.0
+offset_bottom = 34.0
+theme_override_font_sizes/font_size = 24
+text = "Pebbles: "
+
+[node name="Jailbirds" type="Label" parent="."]
+offset_right = 71.0
+offset_bottom = 23.0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "Jailbirds: "

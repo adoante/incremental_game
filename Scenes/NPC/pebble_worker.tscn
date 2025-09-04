@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://m42gxvshkfc3"]
+
+[ext_resource type="PackedScene" uid="uid://eqa83k3j1ils" path="res://Scenes/NPC/worker.tscn" id="1_38u0i"]
+[ext_resource type="Script" uid="uid://crg3lgy4fkexx" path="res://Scripts/NPC/pebble_worker.gd" id="2_vkkiy"]
+
+[node name="PebbleWorker" groups=["worker"] instance=ExtResource("1_38u0i")]
+script = ExtResource("2_vkkiy")
+_worker_name = "Pebble"
+_gem_mine_amount = 1
+_gem_mine_time = 10.0
+
+[node name="Timer" parent="." index="0"]
+wait_time = 10.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci5qeyb0iwyje"]
+
+[ext_resource type="Script" uid="uid://bswam5tcoi0ep" path="res://Scripts/Objects/porphyry.gd" id="1_1f13b"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_pn2bc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1f13b"]
+albedo_color = Color(0.431373, 0.454902, 1, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1f13b"]
+radius = 1.0
+
+[node name="Porphyry" type="StaticBody3D"]
+script = ExtResource("1_1f13b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_pn2bc")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+material_override = SubResource("StandardMaterial3D_1f13b")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CylinderShape3D_1f13b")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

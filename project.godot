@@ -1,0 +1,22 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="biboo_incremental"
+run/main_scene="uid://cqunvupgbvhlq"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://Scenes/Globals/game_manager.tscn"
+SignalManager="*res://Scenes/Globals/signal_manager.tscn"
+StateManager="*res://Scripts/Globals/state_manager.gd"

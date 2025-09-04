@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1stc70qubwfg"]
+
+[ext_resource type="Script" uid="uid://c1xkop3kvygu3" path="res://Scripts/Player/player.gd" id="1_7peto"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_br4bf"]
+radius = 0.2
+height = 0.5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7peto"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7peto"]
+albedo_color = Color(1, 0.611765, 1, 1)
+
+[node name="Biboo" type="CharacterBody3D" groups=["player"]]
+script = ExtResource("1_7peto")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_br4bf")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7peto")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+material_override = SubResource("StandardMaterial3D_7peto")
+radius = 0.2
+height = 0.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs7gy51guueq5"]
+
+[ext_resource type="PackedScene" uid="uid://eqa83k3j1ils" path="res://Scenes/NPC/worker.tscn" id="1_dyv5c"]
+[ext_resource type="Script" uid="uid://cabvyqhnycblu" path="res://Scripts/NPC/jailbird_worker.gd" id="2_mujum"]
+
+[node name="JailbirdWorker" instance=ExtResource("1_dyv5c")]
+script = ExtResource("2_mujum")
+_worker_name = "Jailbird"
+_gem_mine_amount = 1
+_gem_mine_time = 8.0
