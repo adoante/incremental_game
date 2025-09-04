@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://c1xkop3kvygu3" path="res://Scripts/Player/player.gd" id="1_7peto"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_br4bf"]
-radius = 0.2
-height = 0.5
+radius = 0.1
+height = 0.2
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7peto"]
 
@@ -24,7 +24,7 @@ sprite_frames = SubResource("SpriteFrames_7peto")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
 material_override = SubResource("StandardMaterial3D_7peto")
-radius = 0.2
-height = 0.5
+radius = 0.1
+height = 0.2
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

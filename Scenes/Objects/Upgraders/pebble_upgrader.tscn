@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://buani1akenxij"]
+
+[ext_resource type="PackedScene" uid="uid://b27p682b7gs4s" path="res://Scenes/Objects/upgrader.tscn" id="1_pqs8c"]
+[ext_resource type="Script" uid="uid://len6fb2eiyag" path="res://Scripts/Objects/Upgraders/pebble_upgrader.gd" id="2_kikt6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kikt6"]
+albedo_color = Color(0.807843, 0.501961, 1, 1)
+
+[node name="PebbleUpgrader" instance=ExtResource("1_pqs8c")]
+script = ExtResource("2_kikt6")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." index="2"]
+material_override = SubResource("StandardMaterial3D_kikt6")
+radius = 0.3
+height = 0.4

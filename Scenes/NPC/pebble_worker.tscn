@@ -5,9 +5,9 @@
 
 [node name="PebbleWorker" groups=["worker"] instance=ExtResource("1_38u0i")]
 script = ExtResource("2_vkkiy")
-_worker_name = "Pebble"
-_gem_mine_amount = 1
-_gem_mine_time = 10.0
+worker_name = "Pebble"
+gem_mine_amount = 1.0
+gem_mine_time = 10.0
 
 [node name="Timer" parent="." index="0"]
 wait_time = 10.0

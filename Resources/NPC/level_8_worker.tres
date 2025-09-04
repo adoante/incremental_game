@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WorkerResource" load_steps=2 format=3 uid="uid://d3s4dliun8yn1"]
+
+[ext_resource type="Script" uid="uid://be2kti1nb55ko" path="res://Scripts/Resource Builder/worker_resource.gd" id="1_efkfh"]
+
+[resource]
+script = ExtResource("1_efkfh")
+worker_level = 8
+gem_multiplier = 8.5
+mine_time_multiplier = 0.3
+metadata/_custom_type_script = "uid://be2kti1nb55ko"

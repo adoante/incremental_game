@@ -6,22 +6,75 @@
 script = ExtResource("1_ahcct")
 
 [node name="Gems" type="Label" parent="."]
-offset_left = 451.0
-offset_right = 504.0
-offset_bottom = 23.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -39.0
+offset_right = 39.0
+offset_bottom = 34.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 24
 text = "Gems: "
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Pebbles" type="Label" parent="."]
-offset_left = 211.0
-offset_right = 314.0
-offset_bottom = 34.0
-theme_override_font_sizes/font_size = 24
-text = "Pebbles: "
+[node name="UpgradePanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -100.0
+offset_right = 125.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.999299, 1)
 
-[node name="Jailbirds" type="Label" parent="."]
-offset_right = 71.0
-offset_bottom = 23.0
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 24
-text = "Jailbirds: "
+[node name="UpgraderMenu" type="VBoxContainer" parent="UpgradePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.5
+offset_top = -81.5
+offset_right = 46.5
+offset_bottom = 81.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="WorkerName" type="Label" parent="UpgradePanel/UpgraderMenu"]
+layout_mode = 2
+text = "Worker"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WorkerLevel" type="Label" parent="UpgradePanel/UpgraderMenu"]
+layout_mode = 2
+text = "Level: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WorkerRate" type="Label" parent="UpgradePanel/UpgraderMenu"]
+layout_mode = 2
+text = "Rate: 00 gps"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpgradeCost" type="Label" parent="UpgradePanel/UpgraderMenu"]
+layout_mode = 2
+text = "Cost:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpgradeButton" type="Button" parent="UpgradePanel/UpgraderMenu"]
+layout_mode = 2
+text = "UPGRADE"
+icon_alignment = 1
+
+[connection signal="pressed" from="UpgradePanel/UpgraderMenu/UpgradeButton" to="." method="_on_upgrade_button_pressed"]

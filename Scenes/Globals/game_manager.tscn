@@ -4,3 +4,8 @@
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_hargk")
+
+[node name="GemTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="GemTimer" to="." method="_on_gem_timer_timeout"]
